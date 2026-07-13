@@ -1,0 +1,14 @@
+---
+- name: Configuración base de la VM
+  hosts: vm
+  become: true
+
+  roles:
+    - common
+
+- name: Despliegue de la aplicación con Podman
+  hosts: vm
+  become: false
+
+  roles:
+    - podman

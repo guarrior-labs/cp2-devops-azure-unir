@@ -1,0 +1,6 @@
+---
+- name: Login al Azure Container Registry
+  containers.podman.podman_login:
+    registry: "{{ acr_server }}"
+    username: "{{ acr_username }}"
+    password: "{{ acr_password }}"

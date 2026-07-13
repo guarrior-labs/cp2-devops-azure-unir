@@ -1,0 +1,53 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+
+# Terraform plan
+*.tfplan
+
+# SSH
+*.pem
+*.ppk
+id_rsa*
+known_hosts
+
+# Python
+__pycache__/
+*.pyc
+
+# VSCode
+.vscode/
+
+# Linux
+.DS_Store
+
+# Logs
+*.log
+
+# Variables de entorno
+.env
+
+# Ansible
+*.retry
+
+# Certificados - Pendiente Validar si se deben ignorar los certificados de podman y kubernetes
+#app/podman/cert/*
+#!app/podman/cert/.gitkeep
+
+# Kubernetes - Datos persistentes
+app/kubernetes/data/*
+!app/kubernetes/data/.gitkeep
+
+# Podman
+*.tar
+
+# Kubernetes
+*.kubeconfig
+
+# OS
+Thumbs.db
+
+# Azure CLI
+.azure/

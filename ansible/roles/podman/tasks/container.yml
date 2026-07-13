@@ -1,0 +1,23 @@
+---
+- name: Eliminar contenedor anterior
+  containers.podman.podman_container:
+    name: "{{ container_name }}"
+    state: absent
+
+- name: Descargar imagen desde ACR
+  containers.podman.podman_image:
+    name: "{{ container_image }}"
+    pull: true
+
+- name: Crear contenedor
+  containers.podman.podman_container:
+    name: "{{ container_name }}"
+    image: "{{ container_image }}"
+    state: started
+
+    recreate: true
+    restart_policy: always
+
+    publish:
+      - "{{ container_http_port }}:80"
+      - "{{ container_https_port }}:8443"

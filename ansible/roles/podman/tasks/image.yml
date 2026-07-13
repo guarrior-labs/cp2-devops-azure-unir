@@ -1,0 +1,5 @@
+---
+- name: Descargar imagen desde ACR
+  containers.podman.podman_image:
+    name: "{{ container_image }}"
+    pull: true 

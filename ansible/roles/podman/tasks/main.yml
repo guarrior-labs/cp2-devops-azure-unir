@@ -1,0 +1,22 @@
+---
+- name: Mostrar usuario que ejecuta Podman
+  ansible.builtin.command: whoami
+  register: current_user
+  changed_when: false
+
+- name: Mostrar usuario
+  ansible.builtin.debug:
+    var: current_user.stdout
+
+- name: Verificar versión de Podman
+  ansible.builtin.command: podman --version
+  register: podman_version
+  changed_when: false
+
+- name: Mostrar versión de Podman
+  ansible.builtin.debug:
+    var: podman_version.stdout
+
+- import_tasks: login.yml
+- import_tasks: image.yml
+- import_tasks: container.yml

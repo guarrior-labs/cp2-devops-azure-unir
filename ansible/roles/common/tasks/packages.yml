@@ -1,0 +1,11 @@
+---
+- name: Instalar paquetes básicos
+  ansible.builtin.apt:
+    name:
+      - curl
+      - git
+      - unzip
+      - vim
+      - python3-pip
+    state: present
+  become: true

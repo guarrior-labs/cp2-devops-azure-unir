@@ -1,0 +1,14 @@
+---
+vm_user: azureuser
+
+container_name: casopractico2
+
+container_image: cp2guarrioracr2026.azurecr.io/casopractico2:v17
+
+container_http_port: 8080
+
+container_https_port: 8443
+
+acr_server: cp2guarrioracr2026.azurecr.io
+acr_username: cp2guarrioracr2026
+acr_password: DC4JnT9ejauyVysGrGMt3QaTsMlFNekmWyuIEEqDtaijYnSzTswlJQQJ99CGAC1KCM3Eqg7NAAACAZCR0ZbD 
