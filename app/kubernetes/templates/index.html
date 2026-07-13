@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>DevOps Deployment Challenge</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🚀 DevOps Deployment Challenge</h1>
+
+    <p class="subtitle">
+        Completa correctamente el flujo de despliegue.
+    </p>
+
+    <hr>
+
+    <div class="card">
+
+        <label>
+
+            Nombre del participante
+
+        </label>
+
+        <input
+            id="username"
+            type="text"
+            placeholder="Escribe tu nombre">
+
+        <button id="startBtn">
+
+            Iniciar reto
+
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Pasos disponibles</h2>
+
+        <div id="stepsContainer">
+
+            Aquí aparecerán los pasos.
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Orden seleccionado</h2>
+
+        <div id="selectedOrder">
+
+            Ningún paso seleccionado.
+
+        </div>
+
+    </div>
+
+    <div class="card center">
+
+        <button
+            id="deployBtn"
+            disabled>
+
+            Ejecutar Deploy
+
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Resultado</h2>
+
+        <div id="result">
+
+            Esperando...
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Hall of Fame</h2>
+
+        <div id="hallOfFame">
+
+            Sin participantes.
+
+        </div>
+
+    </div>
+
+</div>
+
+<script
+src="{{ url_for('static', filename='app.js') }}">
+</script>
+
+</body>
+
+</html>

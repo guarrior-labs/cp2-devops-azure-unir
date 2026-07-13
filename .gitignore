@@ -51,3 +51,8 @@ Thumbs.db
 
 # Azure CLI
 .azure/
+
+# Python Virtual Environment
+.venv/
+venv/
+env/

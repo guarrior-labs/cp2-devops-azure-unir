@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este proyecto corresponde al Caso Práctico 2 del Diploma de Especialización en DevOps & Cloud de la Universidad Internacional de La Rioja (UNIR).
+Este proyecto corresponde al Caso Práctico 2 del Diplomado de Especialización en DevOps & Cloud de la Universidad Internacional de La Rioja (UNIR).
 
 El objetivo consiste en automatizar el aprovisionamiento de infraestructura en Microsoft Azure y el despliegue de aplicaciones utilizando herramientas de Infraestructura como Código (IaC), automatización y contenedores.
 
@@ -25,6 +25,7 @@ El proyecto incluye dos escenarios de despliegue:
 
 ## Estructura del proyecto
 
+```
 cp2/
 ├── terraform/
 ├── ansible/
@@ -34,7 +35,7 @@ cp2/
 │   └── kubernetes/
 ├── docs/
 │   ├──capturas/
-
+```
 
 ## Tecnologías utilizadas
 
