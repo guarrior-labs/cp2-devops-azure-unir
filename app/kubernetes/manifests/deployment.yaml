@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: cp2-game
+
+spec:
+
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: cp2-game
+
+  template:
+
+    metadata:
+
+      labels:
+        app: cp2-game
+
+    spec:
+
+      containers:
+
+      - name: cp2-game
+
+        image: cp2guarrioracr2026.azurecr.io/casopractico2-game:v1
+
+        imagePullPolicy: Always
+
+        ports:
+
+        - containerPort: 5000
+
+        volumeMounts:
+
+        - name: hall-of-fame-storage
+
+          mountPath: /app/data
+
+      volumes:
+
+      - name: hall-of-fame-storage
+
+        persistentVolumeClaim:
+
+          claimName: hall-of-fame-pvc
