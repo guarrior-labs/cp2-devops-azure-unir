@@ -14,3 +14,11 @@ output "acr_admin_password" {
 output "public_ip" {
   value = azurerm_public_ip.pip_cp2.ip_address
 }
+
+output "aks_name" {
+  value = azurerm_kubernetes_cluster.aks_cp2.name
+}
+
+output "resource_group_name" {
+  value = azurerm_resource_group.rg_cp2.name
+}

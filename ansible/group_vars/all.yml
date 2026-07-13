@@ -3,7 +3,7 @@ vm_user: azureuser
 
 container_name: casopractico2
 
-container_image: cp2guarrioracr2026.azurecr.io/casopractico2:v17
+container_image: cp2guarrioracr2026.azurecr.io/casopractico2:v18
 
 container_http_port: 8080
 
